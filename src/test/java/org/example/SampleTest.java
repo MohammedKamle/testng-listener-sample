@@ -21,8 +21,8 @@ public class SampleTest {
 
     @BeforeMethod
     public void setup(Method m, ITestContext ctx) throws MalformedURLException {
-        String username = "mohammadk";
-        String authkey = "rakcBoBYHiy8BW7osVi4N1LGYjgJhRfAwvL1pPUvwCA1wfNChd";
+        String username = System.getenv("LT_USERNAME") == null ? "Your LT Username" : System.getenv("LT_USERNAME");
+        String authkey = System.getenv("LT_ACCESS_KEY") == null ? "Your LT AccessKey" : System.getenv("LT_ACCESS_KEY");
         ;
         String hub = "@hub.lambdatest.com/wd/hub";
 
